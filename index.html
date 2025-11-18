@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./button.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
+    <title>Document</title>
+
+    <style>
+        html,
+        body {
+            height: 100vh;
+            margin: 0;
+            /* background-color: #44444E; */
+        }
+
+        header,
+        main {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        header {
+            height: 50px;
+            gap: 10%;
+        }
+
+        header button , h1  , .discreption p{
+            font-family: "Poppins", sans-serif;
+
+        }
+
+        #threeMan {
+            width: 500px;
+            height: 500px;
+        }
+        h1{
+            font-size: 2rem;
+            font-weight:bold;
+        }
+
+        #get{
+            color: white;
+            background-color: black;
+            height: 30px;
+            border-radius: 20px;
+            border: none;
+        }
+
+        @media (max-width:768px){
+
+            main{
+                flex-direction: column;
+            }
+         
+            h1{
+                font-size: 30px;
+            }
+              #threeMan {
+            width: 400px;
+            height: 400px;
+        }
+        }
+    </style>
+</head>
+
+<body>
+
+
+    <header>
+        <button id="home" class="click">Home</button>
+        <button id="about" class="noClick">About Us</button>
+        <button id="services" class="noClick">Services</button>
+    </header>
+
+
+    <main>
+        <div class="discreption">
+
+            <h1>Powerful Websites
+                <br>for Your Business</h1>
+                <p>
+                    We design and manage performance-driven<br>
+landing pages built to increase sales,<br>
+generate qualified leads, and maximize <br>
+the ROI of your ad campaigns.
+                </p>
+
+                <button id="get">Get Your Website</button>
+        </div>
+        <img src="./three-man-having-business-meeting-office.png" alt="Three man" id="threeMan">
+    </main>
+
+
+
+    <script src="./main.js"></script>
+</body>
+
+</html>
