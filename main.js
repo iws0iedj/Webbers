@@ -11,6 +11,10 @@ homeBtn.addEventListener("click" , function(){
 homeBtn.classList.add("click");
 homeBtn.classList.remove("noClick");
 
+
+
+scrollByHeader(document.getElementsByClassName("homePage"));
+
 changeBackgroundColor(aboutBtn , servicesBtn);
 });
 
@@ -20,6 +24,8 @@ aboutBtn.addEventListener("click" , function(){
 
 aboutBtn.classList.add("click");
 aboutBtn.classList.remove("noClick");
+
+scrollByHeader(document.getElementsByClassName("aboutUsPage"));
 
 changeBackgroundColor(homeBtn , servicesBtn);
 });
@@ -32,6 +38,8 @@ servicesBtn.addEventListener("click" , function(){
 
 servicesBtn.classList.add("click");
 servicesBtn.classList.remove("noClick");
+
+scrollByHeader(document.getElementsByClassName("servicesPage"));
 
 changeBackgroundColor(homeBtn , aboutBtn);
 });
@@ -51,3 +59,18 @@ function changeBackgroundColor( a ,  b){
   }
 
 }
+
+
+
+function scrollByHeader(target){
+target[0].scrollIntoView({
+        behavior: 'smooth', 
+        
+        block: 'start'
+    });
+}
+
+
+
+
+
