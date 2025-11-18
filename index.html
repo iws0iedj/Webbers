@@ -14,23 +14,40 @@
         body {
             height: 100vh;
             margin: 0;
-            /* background-color: #44444E; */
         }
 
+
         header,
-        main {
+        .homePage,
+        .servicesPage,
+        .reasons div,
+        .aboutUsPage,
+        .con {
             display: flex;
             justify-content: center;
             align-items: center;
 
         }
 
+        
+        main
+         {
+            height: 100%;
+        }
+
         header {
+            position: fixed;
+            background-color: white;
+            width: 100%;
             height: 50px;
             gap: 10%;
         }
 
-        header button , h1  , .discreption p{
+        header button,
+        h1,
+        .discreption p,
+        h2,
+        h3 ,h4{
             font-family: "Poppins", sans-serif;
 
         }
@@ -39,12 +56,22 @@
             width: 500px;
             height: 500px;
         }
-        h1{
+
+        h1 {
             font-size: 2rem;
-            font-weight:bold;
+            font-weight: bold;
         }
 
-        #get{
+        h3 {
+            margin: 0;
+        }
+
+        h2,
+        .servicesPage p {
+            text-align: center;
+        }
+
+        #get {
             color: white;
             background-color: black;
             height: 30px;
@@ -52,19 +79,98 @@
             border: none;
         }
 
-        @media (max-width:768px){
 
-            main{
+
+
+        .servicesPage,
+        .reasons div,
+        .aboutUsPage
+         {
+            flex-direction: column;
+        }
+
+        .reasons,
+        .con {
+            flex-wrap: wrap;
+        }
+        .con{
+            gap: 20px;
+        }
+
+        .reasons {
+            display: flex;
+            justify-content: center;
+            gap: 10%;
+         
+        }
+        .reasons {
+               width: 100%;
+            height: 70%;
+        }
+        .con{
+            /* height: 600px; */
+            width: 70%;
+        }
+
+        .reasons img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .reasons div {
+            height: 200px;
+            width: 400px;
+        }
+
+        .reasons div img {
+            height: 50px;
+            width: 50px;
+        }
+
+        .aboutUsPage {
+            height: 100%;
+        }
+
+     
+
+        .aboutUsPage .con img {
+            height: 250px;
+            width: 250px;
+        }
+        */
+        .con div img{
+
+              height: 200px;
+            width: 200px;
+        }
+
+        .servicesPage ,.homePage{
+            height: 100%;
+        }
+
+      
+
+        @media (max-width:768px) {
+
+
+             .servicesPage{
+            height: 210%;
+        }
+        .homePage{
+            height: 110%;
+        }
+            .homePage {
                 flex-direction: column;
             }
-         
-            h1{
+
+            h1 {
                 font-size: 30px;
             }
-              #threeMan {
-            width: 400px;
-            height: 400px;
-        }
+
+            #threeMan {
+                width: 400px;
+                height: 400px;
+            }
         }
     </style>
 </head>
@@ -74,26 +180,118 @@
 
     <header>
         <button id="home" class="click">Home</button>
-        <button id="about" class="noClick">About Us</button>
         <button id="services" class="noClick">Services</button>
+        <button id="about" class="noClick">About Us</button>
     </header>
 
 
     <main>
-        <div class="discreption">
+        <!-- Home Page -->
+        <section class="homePage">
 
-            <h1>Powerful Websites
-                <br>for Your Business</h1>
+            <div class="discreption">
+
+                <h1>Powerful Websites
+                    <br>for Your Business
+                </h1>
                 <p>
                     We design and manage performance-driven<br>
-landing pages built to increase sales,<br>
-generate qualified leads, and maximize <br>
-the ROI of your ad campaigns.
+                    landing pages built to increase sales,<br>
+                    generate qualified leads, and maximize <br>
+                    the ROI of your ad campaigns.
                 </p>
 
                 <button id="get">Get Your Website</button>
-        </div>
-        <img src="./three-man-having-business-meeting-office.png" alt="Three man" id="threeMan">
+            </div>
+            <img src="./three-man-having-business-meeting-office.png" alt="Three man" id="threeMan">
+        </section>
+
+        <!-- Services page -->
+
+        <section class="servicesPage">
+
+            <div class="whyUs">
+                <h2>Our Services</h2>
+                <p>We deliver high-quality website solutions designed for performance,<br>
+                    Every site we build is crafted with precision, optimized for speed, and<br>
+                    aligned with your brand’s goals.</p>
+            </div>
+
+            <div class="reasons">
+
+                <div>
+                    <img src="" alt="">
+                    <h3>Website Design & Development</h3>
+                    <p>We build modern, responsive, and fast-loading<br>
+                        websites tailored to your brand, goals,<br>
+                        and target audience.</p>
+                </div>
+
+                <div>
+
+                    <img src="" alt="">
+                    <h3>Custom UI/UX Design</h3>
+                    <p>Clean, intuitive interfaces designed to deliver<br>
+                        a seamless user experience across all devices.</p>
+                </div>
+
+                <div>
+
+                    <img src="" alt="">
+                    <h3>Mobile Optimization</h3>
+                    <p>Your website is optimized to perform flawlessly<br>
+                        on phones and tablets, ensuring maximum reach.</p>
+                </div>
+
+
+                <div>
+
+                    <img src="" alt="">
+                    <h3>Website Content Structure</h3>
+                    <p>We organize and structure your site’s pages<br>
+                        for clarity, engagement, and effective<br>
+                        communication.</p>
+                </div>
+
+            </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- الجزئية ثالثة تبدا من هنا  -->
+        <!-- about us -->
+        <section class="aboutUsPage">
+
+            <h2>Why Choose Us ?</h2>
+            <div class="con">
+
+
+                <div>
+
+                    <img src="./pepole.jpg" alt="pepole">
+                </div>
+
+                <div>
+                    <h4>Fast Delivery & Efficient Workflow</h4>
+                    <p>We build and launch landing pages quickly without<br>
+sacrificing quality.<br>
+Our streamlined process ensures you get results<br>
+faster — so your campaigns can start converting sooner.</p>
+
+                </div>
+
+                <div></div>
+
+                <div>
+
+                    <img src="./mony.jpg" alt="mony">
+                </div>
+        </section>
+        <!-- الجزئية ثالثة تنتهي هنا -->
     </main>
 
 
